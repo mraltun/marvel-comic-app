@@ -6,13 +6,3 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  min-height: 100vh;
-  background: -o-linear-gradient(281deg, #f64445 0%, #1106ac 100%);
-  background: linear-gradient(169deg, #f64445 0%, #1105b3 100%);
-}
