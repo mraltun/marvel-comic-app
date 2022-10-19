@@ -12,11 +12,8 @@ const Navbar = () => {
         <img src='../assets/marvelLogo.png' alt='logo' />
       </NavLink>
       <div className={styles.navbarLinks}>
-        <NavLink
-          className={(isActive) => (isActive ? styles.navlink : undefined)}
-          to='about'
-        >
-          About
+        <NavLink className={styles.navlink} to='/' end>
+          Home
         </NavLink>
         <NavLink className={styles.navlink} to='services'>
           Services
@@ -24,8 +21,8 @@ const Navbar = () => {
         <NavLink className={styles.navlink} to='contact-us'>
           Contact Us
         </NavLink>
-        <NavLink className={styles.navlink} to='sign-up'>
-          Sign Up
+        <NavLink className={styles.navlink} to='about'>
+          About
         </NavLink>
         {/* Second Nav */}
         {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}

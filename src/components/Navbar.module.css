@@ -21,9 +21,9 @@
   font-size: 1.5rem;
 }
 
-.active {
+.navlink:global.active {
   color: red;
-  background-color: #fff;
+  border: 2px solid #fff;
 }
 
 .navlinkLogo {
@@ -31,8 +31,13 @@
 }
 
 .hamburgerMenu {
-  display: none;
-  color: #fff;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 75%);
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 .navbarLinks {
@@ -67,5 +72,9 @@
 @media screen and (max-width: 1050px) {
   .navlinkLogo {
     padding-left: 1.2rem;
+  }
+
+  .navbarLinks {
+    margin-right: 1rem;
   }
 }
