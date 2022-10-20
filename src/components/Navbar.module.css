@@ -1,13 +1,35 @@
+/* ANIMATIONS  */
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .navbar {
-  background: rgb(158, 0, 0);
+  background: #8d0303;
   height: 80px;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
-
-  /* Third Nav */
-  /* justify-content: flex-start; */
 }
 
 .navlink {
@@ -19,6 +41,8 @@
   height: 100%;
   cursor: pointer;
   font-size: 1.5rem;
+  animation-name: moveFromRight;
+  animation-duration: 2s;
 }
 
 .navlink:global.active {
@@ -28,29 +52,19 @@
 
 .navlinkLogo {
   padding-top: 0.4rem;
+  animation-name: moveFromLeft;
+  animation-duration: 2s;
 }
 
 .hamburgerMenu {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-100%, 75%);
-  font-size: 1.8rem;
-  cursor: pointer;
+  display: none;
+  color: #fff;
 }
 
 .navbarLinks {
   display: flex;
   align-items: center;
   margin-right: -24px;
-
-  /* Second Nav */
-  /* margin-right: 24px; */
-
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
 }
 
 @media screen and (max-width: 768px) {
@@ -64,8 +78,13 @@
     top: 0;
     right: 0;
     transform: translate(-100%, 75%);
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
+  }
+
+  .navbarLinks.showMenu {
+    display: flex;
+    flex-direction: column;
   }
 }
 

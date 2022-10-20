@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
-import MarvelLogo from "../assets/marvelLogo.png";
+import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
   return (
     <nav className={styles.navbar}>
-      <img src={FaBars} className={styles.hamburgerMenu} alt='' />
       <NavLink className={styles.navlinkLogo} to='/'>
         <img src='../assets/marvelLogo.png' alt='logo' />
       </NavLink>
-      <div className={styles.navbarLinks}>
+      <FaBars
+        className={styles.hamburgerMenu}
+        onClick={() => setNavbarOpen((prev) => !prev)}
+      />
+      <div className={`${styles.navbarLinks} ${navbarOpen ? "showMenu" : ""}`}>
         <NavLink className={styles.navlink} to='/' end>
           Home
         </NavLink>
@@ -24,8 +28,6 @@ const Navbar = () => {
         <NavLink className={styles.navlink} to='about'>
           About
         </NavLink>
-        {/* Second Nav */}
-        {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
       </div>
     </nav>
   );
