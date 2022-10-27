@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from "../assets/marvelLogo.png";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -9,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <NavLink className={styles.navlinkLogo} to='/'>
-        <img src='../assets/marvelLogo.png' alt='logo' />
+        <img src={Logo} alt='logo' />
       </NavLink>
       <FaBars
         className={styles.hamburgerMenu}

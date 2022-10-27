@@ -8,7 +8,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <div className={styles.navbar}>
+    <nav className={styles.navbar}>
       <div className='logo'>
         <img src={Logo} alt='logo' />
       </div>
@@ -36,7 +36,7 @@ const Navbar = () => {
           <FaBars size={30} style={{ color: "#f8f8f8" }} />
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 
