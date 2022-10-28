@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import styles from "./Footer.module.css";
 
@@ -25,7 +24,7 @@ const Footer = () => {
           <FaTwitter className={styles.icons} />
         </a>
         <span> - </span>
-        <p>&copy; 2022 Murat Altun.</p>
+        <p>&copy; 2022 Murat Altun</p>
       </div>
     </footer>
   );
