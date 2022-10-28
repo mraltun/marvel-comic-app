@@ -1,37 +1,52 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/marvelLogo.png";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+const ANavbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className={styles.navbar}>
-      <NavLink className={styles.navlinkLogo} to='/'>
-        <img src={Logo} alt='logo' />
-      </NavLink>
-      <FaBars
-        className={styles.hamburgerMenu}
-        onClick={() => setNavbarOpen((prev) => !prev)}
-      />
-      <div className={`${styles.navbarLinks} ${navbarOpen ? "showMenu" : ""}`}>
-        <NavLink className={styles.navlink} to='/' end>
-          Home
-        </NavLink>
-        <NavLink className={styles.navlink} to='services'>
-          Services
-        </NavLink>
-        <NavLink className={styles.navlink} to='contact-us'>
-          Contact Us
-        </NavLink>
-        <NavLink className={styles.navlink} to='about'>
-          About
-        </NavLink>
-      </div>
-    </nav>
+    <>
+      <header>
+        <nav>
+          <Link to='/' className={styles.logo}>
+            <img src={Logo} alt='' />
+          </Link>
+          {navbarOpen ? (
+            <FaTimes
+              className={styles.hamMenu}
+              onClick={() => setNavbarOpen(!navbarOpen)}
+            />
+          ) : (
+            <FaBars
+              className={styles.hamMenu}
+              onClick={() => setNavbarOpen(!navbarOpen)}
+            />
+          )}
+          <ul
+            className={`navBar ${navbarOpen ? "active" : ""}`}
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
+            <li>
+              <NavLink to='/'>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to='/characters'>Characters</NavLink>
+            </li>
+            <li>
+              <NavLink to='/comics'>Comics</NavLink>
+            </li>
+            <li>
+              <NavLink to='/about'>About</NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      {/* <section className='home'></section> */}
+    </>
   );
 };
 
-export default Navbar;
+export default ANavbar;

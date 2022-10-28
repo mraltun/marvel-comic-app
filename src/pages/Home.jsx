@@ -4,19 +4,19 @@ import { fetchMarvel } from "../api/utils";
 const Home = () => {
   const [chars, setChars] = useState();
 
-  //   useEffect(() => {
-  //     const getChars = async () => {
-  //       try {
-  //         const response = await fetchMarvel(`/characters`);
-  //         const data = await response.data.data.results;
-  //         console.log(data);
-  //         setChars(data);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     };
-  //     getChars();
-  //   }, []);
+  // useEffect(() => {
+  //   const getChars = async () => {
+  //     try {
+  //       const response = await fetchMarvel(`/characters`);
+  //       const data = await response.data.data.results;
+  //       console.log(data);
+  //       setChars(data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   getChars();
+  // }, []);
 
   return (
     <main>
