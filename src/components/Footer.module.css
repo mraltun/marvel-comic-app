@@ -1,0 +1,23 @@
+.footer:global {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: #2b38a8;
+  padding: 10px 0;
+  color: #fff;
+  animation-name: moveFromBottom;
+  animation-duration: 2s;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto; /* Center the DIV horizontally */
+}
+
+.icons {
+  color: #fff;
+}
+
+.copyright {
+}

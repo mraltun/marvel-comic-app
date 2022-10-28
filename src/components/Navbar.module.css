@@ -1,41 +1,4 @@
-/* ANIMATIONS  */
-@keyframes moveFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveFromTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-10rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-header {
+header:global {
   position: fixed;
   width: 100%;
   background-color: #bb0000;
