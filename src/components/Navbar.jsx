@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Search from "./Search";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/marvelLogo.png";
 import styles from "./Navbar.module.css";
@@ -14,6 +15,7 @@ const ANavbar = () => {
           <Link to='/' className={styles.logo}>
             <img src={Logo} alt='' />
           </Link>
+          <Search />
           {navbarOpen ? (
             <FaTimes
               className={styles.hamMenu}
