@@ -1,23 +1,26 @@
 .footer:global {
-  display: flex;
   bottom: 0;
   width: 100%;
+  height: 5rem;
   position: fixed;
-  background: #2b38a8;
-  padding: 10px 0;
+  background: #010949;
   color: #fff;
+  padding: 2rem;
   animation-name: moveFromBottom;
   animation-duration: 2s;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto; /* Center the DIV horizontally */
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  gap: 2rem;
 }
 
 .icons {
   color: #fff;
 }
 
-.copyright {
+.icons:hover {
+  color: #630000;
 }
