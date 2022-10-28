@@ -1,0 +1,28 @@
+.form {
+  margin: 0 2rem;
+}
+
+.search {
+  position: relative;
+  margin: 0 auto;
+  width: min(40rem, 100%);
+}
+
+.input {
+  font-size: 2rem;
+  color: #9b0101;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(100%, -50%);
+  color: #000;
+  font-size: 1rem;
+}

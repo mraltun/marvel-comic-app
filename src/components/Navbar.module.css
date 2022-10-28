@@ -10,7 +10,7 @@ header:global {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -77,7 +77,7 @@ nav ul:global.active {
   }
 
   nav ul {
-    background-color: #bb0000;
+    background-color: #810202;
     position: fixed;
     left: -100vw;
     top: 73.6px;
@@ -103,7 +103,11 @@ nav ul:global.active {
   }
 
   nav ul {
-    top: 87px;
+    top: 75px;
     height: calc(100vh - 65.18px);
+  }
+
+  nav img {
+    height: 5rem;
   }
 }
