@@ -13,8 +13,16 @@ html {
 
 body {
   min-height: 100vh;
-  background: -o-linear-gradient(281deg, #8d0303 0%, #0a0185 100%);
-  background: linear-gradient(169deg, #8d0303 0%, #070158 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #b80000 0%,
+    #940000 15.1%,
+    #6c0101 39.58%,
+    #480101 69.27%,
+    #380505 94.79%
+  );
+  background-repeat: no-repeat;
+  overflow: auto;
   padding: 15rem 0rem;
 }
 

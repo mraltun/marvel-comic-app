@@ -1,7 +1,7 @@
 header:global {
   position: fixed;
   width: 100%;
-  background-color: #bb0000;
+  background-color: #830000;
   padding: 3rem 5rem;
   top: 0;
   animation-name: moveFromTop;
